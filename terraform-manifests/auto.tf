@@ -21,7 +21,7 @@ module "autoscaling" {
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "5.1.1"
 
-  name            = "${local.name}-complete-pakkimti"
+  name            = "${local.name}-complete-pakkimti-${random_pet.server.id}"
   use_name_prefix = false
   instance_name   = "my-instance-name"
 
